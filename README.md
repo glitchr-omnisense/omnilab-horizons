@@ -1,6 +1,6 @@
 # omnilab/horizons
 
-NASA/JPL's Horizons for [glitchr/omnilab](https://github.com/glitchr-studio/omnilab): the
+NASA/JPL's Horizons for [omniscient/omnilab](https://github.com/glitchr-studio/omnilab): the
 ephemeris of a body of the solar system - a planet, a moon, the Sun, an asteroid, a comet, a
 spacecraft - seen from a place on the Earth over a period, as series: its right ascension and
 declination, azimuth and elevation, airmass and extinction, apparent magnitude and surface
