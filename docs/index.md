@@ -138,8 +138,8 @@ since it answers for the future and the past alike.
 
 Refused before any call (`NotSupportedException`): a box or a station, an aggregation, a variable
 without its body or a quantity not served, a body of another scheme (`wikidata:Q111`), a step in
-seconds. A 404 or 410 is an empty answer; any other 4xx a `ProviderException` with what Horizons
-said; an answer that is not JSON a `ProviderException`, as every source's (`HttpSource`).
+seconds. A 404 or 410 is a `ProviderException` too ("the API answered nothing"); any other 4xx a
+`ProviderException` with what Horizons said; an answer that is not JSON a `ProviderException`, as every source's (`HttpSource`).
 
 ## What Horizons does not give here
 
