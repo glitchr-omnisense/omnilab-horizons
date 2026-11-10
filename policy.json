@@ -1,0 +1,38 @@
+{
+    "$schema": "https://github.com/glitchr-omnisense/contracts/blob/1.x/resources/usage-policy.schema.json",
+    "provider": "horizons",
+    "rateLimits": null,
+    "concurrency": 1,
+    "rights": {
+        "commercial": "unknown",
+        "openSourceRequired": null,
+        "caching": {
+            "permission": "unknown",
+            "maxTtl": null
+        },
+        "storage": "unknown",
+        "redistribution": "unknown",
+        "attribution": {
+            "required": false,
+            "text": null,
+            "url": null,
+            "where": []
+        },
+        "licence": null
+    },
+    "requirements": {
+        "key": false,
+        "userAgent": {
+            "required": true,
+            "pattern": null
+        }
+    },
+    "provenance": {
+        "terms": "https://ssd-api.jpl.nasa.gov/",
+        "policy": "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+        "verifiedAt": "2026-11-10",
+        "declaredBy": "maintainer",
+        "contact": "contact-ssd@jpl.nasa.gov",
+        "notes": "Read 2026-11-10: the SSD API Fair Use Policy (ssd-api.jpl.nasa.gov) asks for only the requests a use needs, one API request at a time (no simultaneous requests), results stored and reused, backing off after errors, and requires automated applications to send an application-specific User-Agent with the product name, version and contact information. JPL may rate-limit, throttle or block unreasonable load; no figure is published; the APIs may not be embedded in a website (NASA CORS policy). No data licence is stated. The Horizons API (ssd.jpl.nasa.gov/api/horizons.api) is listed among those SSD APIs; its own page states no limit (optional EMAIL_ADDR parameter, for follow-up only); the Horizons manual asks e-mail automation to space requests by 1 to 2 s (e-mail interface, not the API)."
+    }
+}

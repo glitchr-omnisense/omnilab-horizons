@@ -47,6 +47,17 @@ the application (the source waits 0.2 s between two calls and sends `mailto` in 
 a table holds 90,024 lines at most. Cite it as JPL asks: Giorgini, J.D., and JPL Solar System
 Dynamics Group, NASA/JPL Horizons On-Line Ephemeris System, https://ssd.jpl.nasa.gov/horizons/.
 
+## Usage policy
+
+Declared as data in [`policy.json`](policy.json) (read at https://ssd-api.jpl.nasa.gov/doc/horizons.html on 2026-11-10), and honoured on every request by the
+core: a limit reached waits when its window ends within `max_wait` seconds, else the request is not
+sent ([Usage policies](https://github.com/glitchr-omnisense/omnilab/blob/1.x/docs/policies.md)).
+
+- Limits: not published (unknown); at most 1 in flight.
+- Licence: not stated; commercial use: unknown.
+- Credit: not required.
+- Needs: a User-Agent.
+
 ## Responsibility
 
 This package is an independent, unofficial client: it is not affiliated with, endorsed by or

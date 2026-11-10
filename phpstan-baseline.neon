@@ -1,0 +1,43 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: HorizonsSource.php
+
+		-
+			message: '#^Parameter \#1 \$name of static method Omnilab\\Model\\Identifier\:\:scheme\(\) expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: HorizonsSource.php
+
+		-
+			message: '#^Cannot cast mixed to float\.$#'
+			identifier: cast.double
+			count: 1
+			path: HorizonsSourceFactory.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: HorizonsSourceFactory.php
+
+		-
+			message: '#^Offset int\<0, max\>\|false might not exist on list\<DateTimeImmutable\>\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: Tests/HorizonsSourceTest.php
+
+		-
+			message: '#^Parameter \#1 \$haystack of function str_contains expects string, array\<mixed\>\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: Tests/HorizonsSourceTest.php
+
+		-
+			message: '#^Property Omnilab\\Horizons\\Tests\\HorizonsSourceTest\:\:\$calls \(list\<array\<string, string\>\>\) does not accept non\-empty\-list\<array\<int\|string, array\<mixed\>\|string\>\>\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: Tests/HorizonsSourceTest.php
