@@ -39,6 +39,37 @@ omnilab:
 
 See [docs/](docs/index.md) for what is read, how it maps, and what Horizons does not give here.
 
+## Install and a first call
+
+```sh
+composer require omnilab/horizons
+```
+
+A real call, with no account and no key: Mars' elevation over Strasbourg on 16 October 2026, from
+JPL Horizons. `mailto` is your address, sent in the User-Agent so that the service can reach you
+before it blocks a caller; the source keeps to the limits its [`policy.json`](policy.json) declares.
+
+```php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Omnilab\Horizons\HorizonsSourceFactory;
+use Omnilab\Model\Point;
+use Omnilab\Source\SeriesQuery;
+
+$horizons = (new HorizonsSourceFactory())->create(['mailto' => 'you@example.org']);   // your address, in the User-Agent
+$day = new DateTimeImmutable('2026-10-16', new DateTimeZone('UTC'));
+[$elevation] = $horizons->series(new SeriesQuery(['499:elevation'], new Point(48.5734, 7.7521, 140), $day, $day));
+echo $elevation->label, ': highest ', $elevation->max(), ' ', $elevation->unit, "\n";
+```
+
+Its output on 2026-11-13:
+
+```
+Mars (499): elevation above the horizon (apparent, airless): highest 60.100290517 deg
+```
+
 ## Terms of use
 
 Horizons is a service of the Solar System Dynamics group of NASA's Jet Propulsion Laboratory
